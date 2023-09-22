@@ -1,0 +1,5 @@
+ID_de_Historia,Título_de_la_Historia,Prioridad,Tiempo_Estimado
+1,Implementar autenticación,Alta,10 horas
+2,Desarrollo de frontend,Media,20 horas
+3,Configurar base de datos,Baja,15 horas
+4,Integración de servicios,Alta,12 horas

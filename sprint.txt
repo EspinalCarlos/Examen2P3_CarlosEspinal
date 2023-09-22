@@ -1,0 +1,5 @@
+ID_de_Sprint,Nombre_del_Sprint,Fecha_de_Inicio,Fecha_de_Finalización,Estado_del_Sprint
+1,Sprint 1,01/01/2023,15/01/2023,En curso
+2,Sprint 2,16/01/2023,31/01/2023,Completado
+3,Sprint 3,01/02/2023,15/02/2023,En curso
+4,Sprint 4,16/02/2023,28/02/2023,Cancelado

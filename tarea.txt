@@ -1,0 +1,5 @@
+ID_de_Tarea,Descripción_de_la_Tarea,Estado_de_la_Tarea
+1,Desarrollo de interfaz,Pendiente
+2,Configuración de base de datos,En progreso
+3,Pruebas unitarias,Completada
+4,Documentación,Pendiente

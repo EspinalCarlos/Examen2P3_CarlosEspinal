@@ -1,0 +1,9 @@
+id,nombreCompleto,añosExperiencia,Puesto
+1,Carlos Rodriguez,5,ScrumMaster
+2,Ana González,7,SeniorDev
+3,Javier Herrera,2,JuniorDev
+4,Lucia Méndez,6,SeniorDev
+5,Roberto Diaz,3,JuniorDev
+6,María Pérez,4,JuniorDev
+7,David Ortega,8,ScrumMaster
+8,Luisa Fernández,1,JuniorDev
