@@ -6,12 +6,15 @@
 #include <vector>
 #include <fstream>
 using namespace std;
-class ScrumMaster{
+class ScrumMaster: public Developer{
 	vector<Proyecto*> proyectos;
 	vector<Sprint*> sprints;
 public:
 	ScrumMaster(int id, string nCom, int aExp, string p);
 	~ScrumMaster();
-
+	void setProyectos(vector<Proyecto*>& p);
+	void setSprints(vector<Sprint*>& s);
+	vector<Sprint*> getSprints();
+	vector<Proyecto*> getProyectos();
 };
 
