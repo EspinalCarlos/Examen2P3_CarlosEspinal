@@ -22,3 +22,18 @@ Proyecto::~Proyecto() {
 void Proyecto::setEquipo(vector<Developer*>& devs) {
 	this->Equipo = devs;
 }
+int Proyecto::getID() {
+	return this->IDProyecto;
+}
+string Proyecto::getNombre() {
+	return this->NombreProyecto;
+}
+string Proyecto::getFehcaInicio() {
+	return this->FechaInicio;
+}
+string Proyecto::getFehcaInicio() {
+	return this->FechaFin;
+}
+string Proyecto::getEstado() {
+	return this->Estado;
+}

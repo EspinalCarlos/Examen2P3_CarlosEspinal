@@ -17,6 +17,10 @@ public:
 	Proyecto(int, string, string, string, string);
 	~Proyecto();
 	void setEquipo(vector<Developer*>&);
-
+	int getID();
+	string getNombre();
+	string getFehcaInicio();
+	string getFechaFin();
+	string getEstado();
 };
 

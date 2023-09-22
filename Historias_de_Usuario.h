@@ -12,6 +12,12 @@ class Historias_de_Usuario{
 public:
 	Historias_de_Usuario(int, string, string, int);
 	~Historias_de_Usuario();
+	void setIDRelacionado(int);
+	int getID();
+	string getTitulo();
+	string getPrioridad();
+	int getETA();
+	int getIDRelaSprint();
 
 
 };
