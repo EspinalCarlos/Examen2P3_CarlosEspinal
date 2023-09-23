@@ -189,6 +189,40 @@ void lecturaDevs(vector<Developer*>& devs) {
 
     adevs.close();
 }
+void escritura(vector<Developer*>dm,vector<Sprint*>sm) {
+    ofstream output("developers_modificados.txt");
+    if (!dm.empty()) {
+        if (output.is_open()) {
+            output << "id,nombreCompleto,anosExperiencia,Puesto";
+            output << endl;
+            for (Developer* dev : dm) {
+                output << dev->getId() << ',' << dev->getNombre() << ',' << dev->getAnos() << ',' << dev->getPuesto() << endl;
+            }
+        }
+
+        output.close();
+    }
+
+    ofstream output2("sprints_modificados.txt");
+    if (!sm.empty()) {
+        if (output2.is_open()) {
+            output2 << "ID_de_Sprint,Nombre_del_Sprint,Fecha_de_Inicio,Fecha_de_Finalizacion,Estado_del_Sprint" << endl;
+            for (Sprint* spr : sm) {
+                output2 << spr->getID() << ',' << spr->getNombre() << ',' << spr->getFechaInicio() << ',' << spr->getFechaFin() << ',' << spr->getEstado();
+            }
+        }
+        output2.close();
+    }
+
+}
+
+
+template<typename T>
+void freeMemory(vector<T>& v) {
+    for (T t : v) {
+        delete t;
+    }
+}
 
 void mainmenu() {
     cout << "---- Main Menu ----\n" << "1. Leer archivos\n" << "2. Guardar archivos\n" << "3. Asignaciones\n" << "4. Salir\n" << "Ingrese una opcion: ";
@@ -199,6 +233,9 @@ void menu2() {
 
 int main(){
     vector<Proyecto*> proyectos;
+    vector<Proyecto*> proyectosmod;
+    vector<Sprint*> sprintsmod;
+    vector<Developer*> devmod;
     vector<Historias_de_Usuario*> historias;
     vector<Tarea*> tareas;
     vector<Sprint*> sprints;
@@ -221,11 +258,14 @@ int main(){
                 cout << "\n\n ---- Se ha completado la lectura ----\n\n";
                 break;
             case 2:
+                escritura(devmod, sprintsmod);
 
                 break;
             case 3:
                 menu2();
+                cout << endl << "Ingrese una opcion: ";
                 cin >> opcionasign;
+                cout << endl;
                 switch (opcionasign) {
                     case 1:
                         cout << "--- Asignar Proyecto a Scrum Master ---\n\n";
@@ -247,6 +287,7 @@ int main(){
 
                         ((ScrumMaster*)devs.at(id2))->addProyectos(proyectos.at(id1));
                         cout << proyectos.at(id1) << " asignado al ScrumMaster " << devs.at(id2)->getNombre() << " exitosamente!";
+                        devmod.push_back(devs.at(id2));
 
                         break;
                     case 2:
@@ -266,14 +307,24 @@ int main(){
                         cin >> id2;
 
                         for (Developer* d : proyectos.at(id2)->getEquipo()) {
-                            ((ScrumMaster*)d)->addSprints(sprints.at())
+                            ((ScrumMaster*)d)->addSprints(sprints.at(id1));
+                            devmod.push_back(d);
                         }
+                        sprints.at(id1)->IDRelacionado = proyectos.at(id2)->getID();
+                        sprintsmod.push_back(sprints.at(id1));
 
+
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+                        break;
+                    case 5:
                         break;
                 }
                 break;
             case 4:
-
                 break;
 
         }

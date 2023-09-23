@@ -9,7 +9,6 @@ class Sprint{
 	string FechaInicio;
 	string FechaFinal;
 	string Estado;
-	int IDRelacionado;
 
 public:
 	Sprint(int, string, string, string, string);
@@ -20,6 +19,7 @@ public:
 	string getFechaInicio();
 	string getFechaFin();
 	string getEstado();
+	int IDRelacionado;
 
 
 };
