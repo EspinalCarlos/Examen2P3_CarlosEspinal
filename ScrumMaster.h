@@ -12,8 +12,8 @@ class ScrumMaster: public Developer{
 public:
 	ScrumMaster(int id, string nCom, int aExp, string p);
 	~ScrumMaster();
-	void setProyectos(vector<Proyecto*>& p);
-	void setSprints(vector<Sprint*>& s);
+	void addProyectos(Proyecto*);
+	void addSprints(Sprint*);
 	vector<Sprint*> getSprints();
 	vector<Proyecto*> getProyectos();
 };

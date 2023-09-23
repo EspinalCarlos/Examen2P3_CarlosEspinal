@@ -4,7 +4,7 @@
 #include <fstream>
 using namespace std;
 
-Historias_de_Usuario::Historias_de_Usuario(int id, string title, string priority, int eta) {
+Historias_de_Usuario::Historias_de_Usuario(int id, string title, string priority, string eta) {
 	this->idHistoria = id;
 	this->titulo = title;
 	this->prioridad = priority;

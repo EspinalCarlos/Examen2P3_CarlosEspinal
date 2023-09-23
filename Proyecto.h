@@ -19,8 +19,10 @@ public:
 	void setEquipo(vector<Developer*>&);
 	int getID();
 	string getNombre();
-	string getFehcaInicio();
+	string getFechaInicio();
 	string getFechaFin();
 	string getEstado();
+	vector<Developer*> getEquipo();
+
 };
 

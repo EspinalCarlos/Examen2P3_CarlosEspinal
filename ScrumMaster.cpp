@@ -11,11 +11,11 @@ ScrumMaster::~ScrumMaster() {
 		delete spr;
 	}
 }
-void ScrumMaster::setProyectos(vector<Proyecto*>& prs) {
-	this->proyectos = prs;
+void ScrumMaster::addProyectos(Proyecto* p) {
+	this->proyectos.push_back(p);
 }
-void ScrumMaster::setSprints(vector<Sprint*>& sprs) {
-	this->sprints = sprs;
+void ScrumMaster::addSprints(Sprint* sprs) {
+	this->sprints.push_back(sprs);
 }
 
 vector<Sprint*> ScrumMaster::getSprints() {

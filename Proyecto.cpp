@@ -28,12 +28,15 @@ int Proyecto::getID() {
 string Proyecto::getNombre() {
 	return this->NombreProyecto;
 }
-string Proyecto::getFehcaInicio() {
+string Proyecto::getFechaInicio() {
 	return this->FechaInicio;
 }
-string Proyecto::getFehcaInicio() {
+string Proyecto::getFechaFin() {
 	return this->FechaFin;
 }
 string Proyecto::getEstado() {
 	return this->Estado;
+}
+vector<Developer*> Proyecto::getEquipo() {
+	return this->Equipo;
 }
